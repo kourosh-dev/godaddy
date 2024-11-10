@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoDaddy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/apple-icon-114x114.png" type="image/x-icon">
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <div id="js-sfpb" class="search-for-products--background">
+    <div id="js-sfp" class="search-for-products">
+      <div class="sfp__header">
+        <form class="sfp__form">
+          <svg class="icon-search-sfp" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#444444"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
+          <input class="sfp__form--input" type="text" placeholder="Search for GoDaddy products">
+          <button class="sfp__form--button" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg></button>
+        </form>
+        <button id="js-close-search" class="button-close-sfp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg></button>
+      </div>
+      <div class="sfp__body">
+        <div class="sfp__right">
+          <p class="sfp__right__p">Popular Search Terms</p>
+          <ul>
+            <li class="sfp__right__li list-style-type--none"><a class="sfp__right__links sfp__border-bottom" href="">website builder</a></li>
+            <li class="sfp__right__li list-style-type--none"><a class="sfp__right__links sfp__border-bottom" href="">whois</a></li>
+            <li class="sfp__right__li list-style-type--none"><a class="sfp__right__links sfp__border-bottom" href="">email</a></li>
+            <li class="sfp__right__li list-style-type--none"><a class="sfp__right__links sfp__border-bottom" href="">domain</a></li>
+            <li class="sfp__right__li list-style-type--none"><a class="sfp__right__links " href="">payments</a></li>
+          </ul>
+        </div>
+        <div class="sfp__left">
+          <p class="sfp__left__p">Quick Links</p>
+          <ul>
+            <li class="list-style-type--none"><a class="sfp__left__links" href=""><svg class="uxicon-svg" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 -960 960 960"  fill="#111111"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg>Domain Search</a></li>
+            <li class="list-style-type--none"><a class="sfp__left__links" href=""><svg class="uxicon-svg" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#111111"><path d="M12 6a3.939 3.939 0 0 0-3.934 3.934h2C10.066 8.867 10.934 8 12 8s1.934.867 1.934 1.934c0 .598-.481 1.032-1.216 1.626a9.208 9.208 0 0 0-.691.599c-.998.997-1.027 2.056-1.027 2.174V15h2l-.001-.633c.001-.016.033-.386.441-.793.15-.15.339-.3.535-.458.779-.631 1.958-1.584 1.958-3.182A3.937 3.937 0 0 0 12 6zm-1 10h2v2h-2z"></path><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path></svg>Help Center</a></li>
+            <li class="list-style-type--none"><a class="sfp__left__links" href=""><svg class="uxicon-svg" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 -960 960 960"  fill="#111111"><path d="M446-80q-15 0-30-6t-27-18L103-390q-12-12-17.5-26.5T80-446q0-15 5.5-30t17.5-27l352-353q11-11 26-17.5t31-6.5h287q33 0 56.5 23.5T879-800v287q0 16-6 30.5T856-457L503-104q-12 12-27 18t-30 6Zm0-80 353-354v-286H513L160-446l286 286Zm253-480q25 0 42.5-17.5T759-700q0-25-17.5-42.5T699-760q-25 0-42.5 17.5T639-700q0 25 17.5 42.5T699-640ZM480-480Z"/></svg>Plans & pricing</a></li>
+            <li class="list-style-type--none"><a class="sfp__left__links" href=""><svg class="uxicon-svg" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#111111"><path d="M12 2C6.579 2 2 6.58 2 12s4.579 10 10 10 10-4.58 10-10S17.421 2 12 2zm0 18c-4.337 0-8-3.664-8-8 0-3.998 3.115-7.417 7-7.927V6.09C8.167 6.569 6 9.033 6 12c0 3.309 2.691 6 6 6 1.595 0 3.1-.626 4.237-1.763l-1.414-1.415A3.97 3.97 0 0 1 12 16c-2.206 0-4-1.794-4-4 0-1.858 1.279-3.411 3-3.858v2.146c-.59.353-1 .993-1 1.712 0 1.081.919 2 2 2s2-.919 2-2c0-.719-.41-1.359-1-1.712V4.073c3.885.51 7 3.929 7 7.927 0 4.336-3.663 8-8 8z"/></svg>Account - My Products</a></li>
+            <li class="list-style-type--none"><a class="sfp__left__links" href=""><svg class="uxicon-svg" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 -960 960 960"  fill="#111111"><path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg>Hire an Expert</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header>
+    <div class="sidebar__blur--background" id="js-sidebar__background">
+      <div class="sidebar--container">
+        <nav class="sidebar">
+          <button id="sidebar__logo">
+            <svg xmlns="http://www.w3.org/2000/svg" class="logo-mark-black" viewBox="0 0 166 32">
+              <path class="mobile desktop" d="M30.824 1.453c-3.713-2.316-8.603-1.77-12.963.972-4.347-2.74-9.239-3.288-12.948-.972C-.955 5.12-1.667 14.564 3.32 22.546c3.677 5.887 9.428 9.335 14.548 9.271 5.119.064 10.87-3.384 14.547-9.27C37.4 14.563 36.692 5.12 30.824 1.452zM6.02 20.863a19.112 19.112 0 01-2.303-5.273 15.067 15.067 0 01-.5-4.97C3.44 7.673 4.64 5.375 6.598 4.15c1.957-1.224 4.544-1.295 7.299-.203.419.169.829.358 1.228.568a22.496 22.496 0 00-3.956 4.754C8.14 14.116 7.215 19.511 8.272 23.81a19.723 19.723 0 01-2.253-2.947zm26.003-5.273a19.158 19.158 0 01-2.302 5.272 19.733 19.733 0 01-2.254 2.954c.946-3.855.303-8.576-2.014-13.005a.583.583 0 00-.837-.228l-7.225 4.515a.59.59 0 00-.188.813l1.06 1.695a.59.59 0 00.814.188l4.683-2.925c.151.454.303.901.416 1.363.442 1.617.611 3.297.5 4.97-.223 2.95-1.424 5.247-3.38 6.471a6.607 6.607 0 01-3.35.97h-.15a6.599 6.599 0 01-3.35-.97c-1.958-1.224-3.159-3.521-3.381-6.472-.11-1.672.058-3.352.5-4.969a19.671 19.671 0 016.03-9.65 15.108 15.108 0 014.241-2.629c2.748-1.092 5.34-1.02 7.298.203 1.958 1.224 3.157 3.522 3.38 6.47a15.105 15.105 0 01-.49 4.964z"></path>
+              <path class="desktop" d="M74.065 12.892c-4.06 0-7.34 3.169-7.34 7.2 0 4.004 3.28 7.121 7.34 7.121 4.086 0 7.366-3.112 7.366-7.12 0-4.03-3.275-7.2-7.366-7.2zm0 10.557c-1.871 0-3.295-1.513-3.295-3.384s1.424-3.407 3.295-3.407c1.898 0 3.322 1.54 3.322 3.412 0 1.87-1.424 3.385-3.322 3.385v-.006zM90.583 7.362h-7.468a.6.6 0 00-.61.612v18.208a.605.605 0 00.61.648h7.468c5.977 0 10.13-3.975 10.13-9.758 0-5.818-4.153-9.71-10.13-9.71zm.177 15.622h-4.087V11.198h4.087c3.308 0 5.588 2.474 5.588 5.866 0 3.336-2.28 5.92-5.588 5.92zm24.82-9.7h-2.809a.633.633 0 00-.582.612v.833c-.64-1.057-2.085-1.835-3.884-1.835-3.503 0-6.783 2.751-6.783 7.145 0 4.37 3.251 7.171 6.755 7.171 1.806 0 3.28-.777 3.92-1.834v.861a.587.587 0 00.582.585h2.808a.571.571 0 00.584-.585V13.896a.594.594 0 00-.592-.612zm-6.533 10.196c-1.86 0-3.256-1.43-3.256-3.412s1.397-3.41 3.256-3.41c1.86 0 3.257 1.426 3.257 3.408 0 1.983-1.395 3.412-3.257 3.412v.002zm22.294-16.118h-2.808a.592.592 0 00-.61.584v6.728c-.648-1.002-2.114-1.78-3.948-1.78-3.476 0-6.7 2.751-6.7 7.145 0 4.37 3.252 7.171 6.755 7.171 1.806 0 3.17-.777 3.92-1.834v.861c0 .322.261.583.583.585h2.808a.57.57 0 00.584-.585V7.95a.57.57 0 00-.584-.588zm-6.532 16.152c-1.852 0-3.237-1.444-3.237-3.448 0-2.003 1.39-3.447 3.237-3.447 1.846 0 3.237 1.444 3.237 3.447 0 2.004-1.384 3.448-3.237 3.448zm22.29-16.152h-2.803a.594.594 0 00-.612.584v6.728c-.64-1.002-2.114-1.78-3.947-1.78-3.477 0-6.7 2.751-6.7 7.145 0 4.37 3.253 7.171 6.755 7.171 1.807 0 3.168-.777 3.92-1.834v.861a.587.587 0 00.584.585h2.803a.568.568 0 00.582-.585V7.95a.568.568 0 00-.582-.588zm-6.532 16.152c-1.853 0-3.237-1.444-3.237-3.448 0-2.003 1.39-3.447 3.237-3.447 1.846 0 3.237 1.444 3.237 3.447 0 2.004-1.38 3.448-3.232 3.448h-.005zm21.906-9.283l-4.19 14.37c-.809 2.556-2.613 4.086-5.421 4.086-1.277 0-2.44-.261-3.35-.782-.531-.303-.971-.58-.971-1.023 0-.275.089-.417.25-.675l.832-1.246c.235-.348.408-.461.66-.461a.96.96 0 01.554.192c.523.339 1.008.63 1.748.63.864 0 1.524-.277 1.88-1.306l.36-1.193h-1.696c-.418 0-.648-.249-.751-.584l-3.75-12.008c-.14-.473-.011-.946.683-.946h2.954c.36 0 .613.123.771.64l2.77 9.67 2.589-9.67c.082-.334.306-.64.75-.64h2.802c.552-.001.719.387.526.946zm-96.806 4.274v7.676a.625.625 0 01-.635.634h-2.317a.623.623 0 01-.634-.634v-2.015c-1.472 1.858-4.03 3.028-6.924 3.028-5.434 0-9.681-4.088-9.681-9.908 0-6.048 4.585-10.217 10.377-10.217 4.276 0 7.694 1.839 9.212 5.537a.843.843 0 01.07.309c0 .175-.116.307-.486.435l-2.706 1.042a.694.694 0 01-.511.009.783.783 0 01-.324-.371c-.971-1.847-2.7-3.1-5.36-3.1-3.45 0-5.922 2.694-5.922 6.188 0 3.387 2.104 6.172 6.02 6.172 2.06 0 3.703-.97 4.469-2.037H57.87a.625.625 0 01-.634-.635v-2.086a.625.625 0 01.634-.634h7.161a.604.604 0 01.635.607z"></path>
+              <path class="desktop" d="M162.55 10.442v-.186c0-.013.004-.026.012-.036a.052.052 0 01.034-.013h1.183c.013 0 .025.005.034.013.009.01.013.023.013.036v.186a.052.052 0 01-.013.034.047.047 0 01-.034.013h-.432v1.167a.05.05 0 01-.048.048h-.224a.044.044 0 01-.032-.014.047.047 0 01-.015-.034v-1.167h-.432a.044.044 0 01-.047-.047zm2.068-.193l.323.75.324-.75a.066.066 0 01.026-.032.087.087 0 01.044-.01h.375a.044.044 0 01.047.046v1.404a.044.044 0 01-.045.047h-.21a.047.047 0 01-.035-.013.042.042 0 01-.013-.034v-1.06l-.348.77a.084.084 0 01-.026.038.08.08 0 01-.043.01h-.172a.078.078 0 01-.042-.01.073.073 0 01-.026-.037l-.346-.77v1.06a.052.052 0 01-.013.033.052.052 0 01-.032.013h-.216a.042.042 0 01-.03-.013.042.042 0 01-.013-.034v-1.404a.044.044 0 01.047-.046h.364c.014 0 .029.003.042.01.009.009.015.02.018.032z"></path>
+              <path class="mobile" d="M27.889 30.386v-.21c0-.015.005-.03.015-.04a.048.048 0 01.038-.015h1.342c.014-.001.028.004.038.015.01.01.016.025.015.04v.21a.051.051 0 01-.015.04.048.048 0 01-.038.014h-.49v1.322a.05.05 0 01-.017.04.051.051 0 01-.038.017h-.253a.055.055 0 01-.038-.017.06.06 0 01-.015-.04V30.44h-.49a.048.048 0 01-.039-.015.051.051 0 01-.015-.04zm2.345-.217l.374.848.375-.848a.073.073 0 01.03-.036.08.08 0 01.05-.012h.4a.051.051 0 01.053.053v1.592a.056.056 0 01-.013.037.05.05 0 01-.037.016h-.24a.055.055 0 01-.038-.016.056.056 0 01-.015-.037v-1.203l-.393.874a.09.09 0 01-.03.04.086.086 0 01-.05.013h-.194a.085.085 0 01-.048-.012.09.09 0 01-.03-.041l-.393-.874v1.203a.05.05 0 01-.015.037.053.053 0 01-.036.016h-.243a.05.05 0 01-.036-.016.056.056 0 01-.015-.037v-1.592a.05.05 0 01.017-.038.047.047 0 01.036-.015h.413a.083.083 0 01.049.012.071.071 0 01.029.036z"></path>
+            </svg>
+          </button>
+          <button class="sidebar__items">Domains<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512" height="512"><path d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z"/></svg></button>
+          <button class="sidebar__items">Website<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512" height="512"><path d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z"/></svg></button>
+          <button class="sidebar__items">Email</button>
+          <button class="sidebar__items">Hostin and Security<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512" height="512"><path d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z"/></svg></button>
+          <button class="sidebar__items">Commerce<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512" height="512"><path d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z"/></svg></button>
+          <button id="tm" class="sidebar__items">GoDaddy Airo<sup>TM</sup></button>
+          <button class="sidebar__items">Pricing</button>
+          <div class="sidebar__bottom">
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(0, 0, 0);">
+                <path d="M12 6a3.939 3.939 0 0 0-3.934 3.934h2C10.066 8.867 10.934 8 12 8s1.934.867 1.934 1.934c0 .598-.481 1.032-1.216 1.626a9.208 9.208 0 0 0-.691.599c-.998.997-1.027 2.056-1.027 2.174V15h2l-.001-.633c.001-.016.033-.386.441-.793.15-.15.339-.3.535-.458.779-.631 1.958-1.584 1.958-3.182A3.937 3.937 0 0 0 12 6zm-1 10h2v2h-2z"></path>
+                <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path>
+              </svg>Help Center
+            </a>
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(0, 0, 0);">
+                <path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"></path>
+              </svg>Account
+            </a>
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(0, 0, 0);">
+                <path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path>
+                <circle cx="10.5" cy="19.5" r="1.5"></circle>
+                <circle cx="17.5" cy="19.5" r="1.5"></circle>
+              </svg>Basket
+            </a>
+          </div>
+        </nav>
+        <button class="sidebar__button--hide" id="js-sidebar-hide">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);">
+            <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="left--header">
+      <button class="sidebar__button--open">
+        <svg xmlns="http://www.w3.org/2000/svg" height="31px" viewBox="0 -960 960 960" width="31px" fill="#e8eaed">
+          <path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/>
+        </svg>
+      </button>
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" class="logo-mark" viewBox="0 0 166 32">
+          <path class="mobile desktop" d="M30.824 1.453c-3.713-2.316-8.603-1.77-12.963.972-4.347-2.74-9.239-3.288-12.948-.972C-.955 5.12-1.667 14.564 3.32 22.546c3.677 5.887 9.428 9.335 14.548 9.271 5.119.064 10.87-3.384 14.547-9.27C37.4 14.563 36.692 5.12 30.824 1.452zM6.02 20.863a19.112 19.112 0 01-2.303-5.273 15.067 15.067 0 01-.5-4.97C3.44 7.673 4.64 5.375 6.598 4.15c1.957-1.224 4.544-1.295 7.299-.203.419.169.829.358 1.228.568a22.496 22.496 0 00-3.956 4.754C8.14 14.116 7.215 19.511 8.272 23.81a19.723 19.723 0 01-2.253-2.947zm26.003-5.273a19.158 19.158 0 01-2.302 5.272 19.733 19.733 0 01-2.254 2.954c.946-3.855.303-8.576-2.014-13.005a.583.583 0 00-.837-.228l-7.225 4.515a.59.59 0 00-.188.813l1.06 1.695a.59.59 0 00.814.188l4.683-2.925c.151.454.303.901.416 1.363.442 1.617.611 3.297.5 4.97-.223 2.95-1.424 5.247-3.38 6.471a6.607 6.607 0 01-3.35.97h-.15a6.599 6.599 0 01-3.35-.97c-1.958-1.224-3.159-3.521-3.381-6.472-.11-1.672.058-3.352.5-4.969a19.671 19.671 0 016.03-9.65 15.108 15.108 0 014.241-2.629c2.748-1.092 5.34-1.02 7.298.203 1.958 1.224 3.157 3.522 3.38 6.47a15.105 15.105 0 01-.49 4.964z"></path>
+          <path class="desktop" d="M74.065 12.892c-4.06 0-7.34 3.169-7.34 7.2 0 4.004 3.28 7.121 7.34 7.121 4.086 0 7.366-3.112 7.366-7.12 0-4.03-3.275-7.2-7.366-7.2zm0 10.557c-1.871 0-3.295-1.513-3.295-3.384s1.424-3.407 3.295-3.407c1.898 0 3.322 1.54 3.322 3.412 0 1.87-1.424 3.385-3.322 3.385v-.006zM90.583 7.362h-7.468a.6.6 0 00-.61.612v18.208a.605.605 0 00.61.648h7.468c5.977 0 10.13-3.975 10.13-9.758 0-5.818-4.153-9.71-10.13-9.71zm.177 15.622h-4.087V11.198h4.087c3.308 0 5.588 2.474 5.588 5.866 0 3.336-2.28 5.92-5.588 5.92zm24.82-9.7h-2.809a.633.633 0 00-.582.612v.833c-.64-1.057-2.085-1.835-3.884-1.835-3.503 0-6.783 2.751-6.783 7.145 0 4.37 3.251 7.171 6.755 7.171 1.806 0 3.28-.777 3.92-1.834v.861a.587.587 0 00.582.585h2.808a.571.571 0 00.584-.585V13.896a.594.594 0 00-.592-.612zm-6.533 10.196c-1.86 0-3.256-1.43-3.256-3.412s1.397-3.41 3.256-3.41c1.86 0 3.257 1.426 3.257 3.408 0 1.983-1.395 3.412-3.257 3.412v.002zm22.294-16.118h-2.808a.592.592 0 00-.61.584v6.728c-.648-1.002-2.114-1.78-3.948-1.78-3.476 0-6.7 2.751-6.7 7.145 0 4.37 3.252 7.171 6.755 7.171 1.806 0 3.17-.777 3.92-1.834v.861c0 .322.261.583.583.585h2.808a.57.57 0 00.584-.585V7.95a.57.57 0 00-.584-.588zm-6.532 16.152c-1.852 0-3.237-1.444-3.237-3.448 0-2.003 1.39-3.447 3.237-3.447 1.846 0 3.237 1.444 3.237 3.447 0 2.004-1.384 3.448-3.237 3.448zm22.29-16.152h-2.803a.594.594 0 00-.612.584v6.728c-.64-1.002-2.114-1.78-3.947-1.78-3.477 0-6.7 2.751-6.7 7.145 0 4.37 3.253 7.171 6.755 7.171 1.807 0 3.168-.777 3.92-1.834v.861a.587.587 0 00.584.585h2.803a.568.568 0 00.582-.585V7.95a.568.568 0 00-.582-.588zm-6.532 16.152c-1.853 0-3.237-1.444-3.237-3.448 0-2.003 1.39-3.447 3.237-3.447 1.846 0 3.237 1.444 3.237 3.447 0 2.004-1.38 3.448-3.232 3.448h-.005zm21.906-9.283l-4.19 14.37c-.809 2.556-2.613 4.086-5.421 4.086-1.277 0-2.44-.261-3.35-.782-.531-.303-.971-.58-.971-1.023 0-.275.089-.417.25-.675l.832-1.246c.235-.348.408-.461.66-.461a.96.96 0 01.554.192c.523.339 1.008.63 1.748.63.864 0 1.524-.277 1.88-1.306l.36-1.193h-1.696c-.418 0-.648-.249-.751-.584l-3.75-12.008c-.14-.473-.011-.946.683-.946h2.954c.36 0 .613.123.771.64l2.77 9.67 2.589-9.67c.082-.334.306-.64.75-.64h2.802c.552-.001.719.387.526.946zm-96.806 4.274v7.676a.625.625 0 01-.635.634h-2.317a.623.623 0 01-.634-.634v-2.015c-1.472 1.858-4.03 3.028-6.924 3.028-5.434 0-9.681-4.088-9.681-9.908 0-6.048 4.585-10.217 10.377-10.217 4.276 0 7.694 1.839 9.212 5.537a.843.843 0 01.07.309c0 .175-.116.307-.486.435l-2.706 1.042a.694.694 0 01-.511.009.783.783 0 01-.324-.371c-.971-1.847-2.7-3.1-5.36-3.1-3.45 0-5.922 2.694-5.922 6.188 0 3.387 2.104 6.172 6.02 6.172 2.06 0 3.703-.97 4.469-2.037H57.87a.625.625 0 01-.634-.635v-2.086a.625.625 0 01.634-.634h7.161a.604.604 0 01.635.607z"></path>
+          <path class="desktop" d="M162.55 10.442v-.186c0-.013.004-.026.012-.036a.052.052 0 01.034-.013h1.183c.013 0 .025.005.034.013.009.01.013.023.013.036v.186a.052.052 0 01-.013.034.047.047 0 01-.034.013h-.432v1.167a.05.05 0 01-.048.048h-.224a.044.044 0 01-.032-.014.047.047 0 01-.015-.034v-1.167h-.432a.044.044 0 01-.047-.047zm2.068-.193l.323.75.324-.75a.066.066 0 01.026-.032.087.087 0 01.044-.01h.375a.044.044 0 01.047.046v1.404a.044.044 0 01-.045.047h-.21a.047.047 0 01-.035-.013.042.042 0 01-.013-.034v-1.06l-.348.77a.084.084 0 01-.026.038.08.08 0 01-.043.01h-.172a.078.078 0 01-.042-.01.073.073 0 01-.026-.037l-.346-.77v1.06a.052.052 0 01-.013.033.052.052 0 01-.032.013h-.216a.042.042 0 01-.03-.013.042.042 0 01-.013-.034v-1.404a.044.044 0 01.047-.046h.364c.014 0 .029.003.042.01.009.009.015.02.018.032z"></path>
+          <path class="mobile" d="M27.889 30.386v-.21c0-.015.005-.03.015-.04a.048.048 0 01.038-.015h1.342c.014-.001.028.004.038.015.01.01.016.025.015.04v.21a.051.051 0 01-.015.04.048.048 0 01-.038.014h-.49v1.322a.05.05 0 01-.017.04.051.051 0 01-.038.017h-.253a.055.055 0 01-.038-.017.06.06 0 01-.015-.04V30.44h-.49a.048.048 0 01-.039-.015.051.051 0 01-.015-.04zm2.345-.217l.374.848.375-.848a.073.073 0 01.03-.036.08.08 0 01.05-.012h.4a.051.051 0 01.053.053v1.592a.056.056 0 01-.013.037.05.05 0 01-.037.016h-.24a.055.055 0 01-.038-.016.056.056 0 01-.015-.037v-1.203l-.393.874a.09.09 0 01-.03.04.086.086 0 01-.05.013h-.194a.085.085 0 01-.048-.012.09.09 0 01-.03-.041l-.393-.874v1.203a.05.05 0 01-.015.037.053.053 0 01-.036.016h-.243a.05.05 0 01-.036-.016.056.056 0 01-.015-.037v-1.592a.05.05 0 01.017-.038.047.047 0 01.036-.015h.413a.083.083 0 01.049.012.071.071 0 01.029.036z"></path>
+        </svg>
+      </a>
+      <nav id="header__navigation">
+        <button>Domains<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#c2c2c2"><path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"/></svg></button>
+        <button>Website and Hosting<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#c2c2c2"><path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"/></svg></button>
+        <button>Email</button>
+        <button>Security<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#c2c2c2"><path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"/></svg></button>
+        <button>Marketing<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#c2c2c2"><path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"/></svg></button>
+        <button>Pricing</button>
+      </nav>
+    </div>
+
+    <div class="right--header">
+      <button id="js-button-search-header" class="right--header__items--mobile search--product" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg></button>
+      <a class="right--header__items--desktop" href="">Sign In<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#c2c2c2"><path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"/></svg></a>
+      <a class="right--header__items--desktop" href="">Help</a>
+      <a class="right--header__items--mobile" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);"><path d="M12 6a3.939 3.939 0 0 0-3.934 3.934h2C10.066 8.867 10.934 8 12 8s1.934.867 1.934 1.934c0 .598-.481 1.032-1.216 1.626a9.208 9.208 0 0 0-.691.599c-.998.997-1.027 2.056-1.027 2.174V15h2l-.001-.633c.001-.016.033-.386.441-.793.15-.15.339-.3.535-.458.779-.631 1.958-1.584 1.958-3.182A3.937 3.937 0 0 0 12 6zm-1 10h2v2h-2z"></path><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path></svg></a>
+      <a class="right--header__items--mobile" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);"><path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"></path></svg></a>
+      <a class="right--header__items--mobile" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);"><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></a>
+    </div>
+  </header>
+
+<!-- main -->
+  <main>
+
+<!-- search box -->
+    <div class="search-box__sticky">
+      <div class="container--search--box">
+        <form class="search--box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #767676;"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
+          <input type="search" placeholder="Type the domain you want">
+          <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
+          </button>
+        </form>
+        <div class="aside--search--box">
+          <p>.foundation</p>
+          <p>‪kr63.66*‬/1st yr.<br>
+            <span>Improve the world width .foundation</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+<!-- section 1 -->
+    <section class="section-1">
+      <div class="section1__hero">
+        <div class="section__hero--top">
+          <img src="images/icons/img-hp-airo-logo.svg" alt="GoDaddy airo logo">
+          <h1>Put your domain into action with AI.</h1>
+          <p>Buy a new domain and get GoDaddy Airo™, our customizable, AI-powered solution that can easily deliver a website, logo, and more.^</p>
+          <a class="black--button" href="">Learn More <img src="images/icons/arrow-right.svg" alt=""></a>
+        </div>
+        <div class="section1__hero--bottom">
+          <article>
+            <p>AI Suggested Domains</p>
+            <h2>Find the perfect domain and business name width AI.</h2>
+          </article>
+          <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px" height="20px"><path d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+<!-- section 2 -->
+    <section class="section-2">
+      <div class="section2__top--content">
+        <h2>What's first up for your business?</h2>
+        <div class="section2__buttons scrollbar">
+          <button id="js-domains" class="active">Domains</button>
+          <button id="js-recommended">Recommended</button>
+          <button id="js-wordpress">WordPress and Securty</button>
+        </div>
+      </div>
+      <div class="section2__bottom--content">
+        <div class="section2__containers section2__domain--container display">
+          <a class="section2__domain__img--1">
+            <p>Domains</p>
+            <p>Get started with the perfect domain, which comes with free domain privacy protection forever.</p>
+            <div>Search Domain</div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px" height="20px"><path d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z"/></svg>
+          </a>
+          <a class="section2__domain__img--2">
+            <p>.co for ‪kr99.00‬/1st year</p>
+            <p>Ensure your company and website stand out with a .co domain.<br>
+              2-year purchase required. Additional year(s) ‪kr549.00‬.</p>
+              <div>Get Started</div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px" height="20px"><path d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z"/></svg>
+          </a>
+        </div>
+
+        <div class="section2__containers section2__recommended--container">
+          <a class="section2__recommended__img--1">
+            <p>Professional Email kr22.00 per user/mo</p>
+            <p>Earn trust from your customers with an email address that matches your domain.</p>
+            <div>Get Started</div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px" height="20px"><path d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z"/></svg>
+          </a>
+          <a class="section2__recommended__img--2" href="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px" height="20px"><path d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z"/></svg>
+            <p>Websites kr65.00/mo</p>
+            <p>Start for free and quickly design a beautiful, mobile-friendly site.</p>
+            <div>Create Your Site</div>
+          </a>
+          <a class="section2__recommended__img--3" href="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px" height="20px"><path d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z"/></svg>
+            <p>Web Hosting kr65.00/mo</p>
+            <p>Get fast load times and 99.9% uptime guaranteed.***</p>
+            <div>View Plans and Pricing</div>
+          </a>
+        </div>
+
+        <div class="section2__containers section2__wordpress--container">
+          <a class="section2__wordpress--img--1" href="">
+            <p>WordPress kr65.00/mo</p>
+            <p>Let AI quickly build a fully-managed website that's always up to date, with no worries.</p>
+            <div>Explore WordPress plane</div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px" height="20px"><path d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z"/></svg>
+          </a>
+          <a class="section2__wordpress--img--2" href="">
+            <p>SSL Certificates kr549.00/yr</p>
+            <p>Help keep sensitive data secure on your site and boost search ranking with an SSL Certificate.</p>
+            <div>Secure Your Data</div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px" height="20px"><path d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+<!-- section 3 -->
+    <section class="section-3">
+      <div class="section3__div--h2">
+        <h2>Grow your brand with Websites + Marketing.</h2>
+      </div>
+      <div class="section3__cards--desktop">
+        <img loading="lazy" id="js-s3__image--desktop-1" class="section3__images--desktop s3__display" src="images/intl-img-bl-prod-feature-get-online-fast-desktop.webp" alt="get website fast">
+        <img loading="lazy" id="js-s3__image--desktop-2" class="section3__images--desktop" src="images/intl-img-bl-prod-feature-build-trust-desktop.webp" alt="email marketing">
+        <img loading="lazy" id="js-s3__image--desktop-3" class="section3__images--desktop" src="images/intl-img-bl-prod-feature-engage-with-marketing-desktop.webp" alt="engage marketing">
+        
+        <div class="s3__card--desktop__articles">
+          <article id="js-s3__desktop--article-1" class="s3__active">
+            <h4>Get online fast. No design skills needed. </h4>
+            <p>Build your site in minutes. Choose from 100s of beautiful, mobile-friendly templates with our Website Builder, many with ecommerce features.</p>
+          </article>
+          <article id="js-s3__desktop--article-2">
+            <h4>Build trust with email that matches your domain. </h4>
+            <p>Help boost your credibility with customers with free Professional Email that’s identical to your domain name.</p>
+          </article>
+          <article id="js-s3__desktop--article-3">
+            <h4>Engage with marketing tools.</h4>
+            <p>Help your audience find you with built-in SEO and promote your business with social media and email marketing tools.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="section3__container--cards scrollbar">
+        <div class="section3__card">
+          <div class="section3__img1 section3__image"></div>
+          <article>
+            <h4>Get online fast. No design skills needed. </h4>
+            <p>Build your site in minutes. Choose from 100s of beautiful, mobile-friendly templates with our Website Builder, many with ecommerce features.</p>
+          </article>
+        </div>
+        <div class="section3__card">
+          <div class="section3__img2 section3__image"></div>
+          <article>
+            <h4>Build trust with email that matches your domain. </h4>
+            <p>Help boost your credibility with customers with free Professional Email that’s identical to your domain name.</p>
+          </article>
+        </div>
+        <div class="section3__card">
+          <div class="section3__img3 section3__image"></div>
+          <article>
+            <h4>Engage with marketing tools.</h4>
+            <p>Help your audience find you with built-in SEO and promote your business with social media and email marketing tools.</p>
+          </article>
+        </div>
+      </div>
+      <div class="section3__div--button">
+        <button class="black--button">Start for Free <img loading="lazy" src="images/icons/arrow-right.svg" alt=""></button>
+      </div>
+    </section>
+
+<!-- section 4 -->
+    <section class="section-4">
+      <h2>Onward and upward with <br> our customers.</h2>
+      <div class="s4__background">
+        <div class="s4__img">
+          <p class="s4_img_p-1">Rahiem Thompson</p>
+          <p class="s4_img_p-2">roletape.com</p>
+        </div>
+        <div class="s4__content">
+          <p class="s4__heading--bottom">“GoDaddy's Website Builder is super-convenient for somebody who has an idea of what they're trying to create, but might not have any technical skills.”</p>
+          <div class="s4__content--bottom">
+            <div class="s4__content--bottom--right">
+              <p>Products used by</p>
+              <p>Roletape:</p>
+              <nav class="s4__nav">
+                <ul class="s4__ul">
+                  <li class="s4__links">
+                    <span><img loading="lazy" src="images/icons/bx-search.svg" alt=""></span>
+                    <a href="">Domain</a>
+                  </li>
+                  <li class="s4__links">
+                    <span><img loading="lazy" src="images/icons/bx-store.svg" alt=""></span>
+                    <a href="">Online Store</a>
+                  </li>
+                  <li class="s4__links">
+                    <span><img loading="lazy" src="images/icons/bx-shield-alt-2.svg" alt=""></span>
+                    <a href="">SSL Certificates</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <img loading="lazy" class="s4__img--bottom" src="images/Raheim-Thompson-site.webp" alt="">
+          </div>
+        </div>
+        <div class="rahiem">
+          <p>Rahiem Thompson</p>
+          <p>roletape.com</p>
+        </div>
+      </div>
+      
+    </section>
+
+<!-- section 5 -->
+    <section class="section-5">
+      <div class="s5-padding">
+        <h2>Trusted by 20+ million <br> customers around the world.</h2>
+      </div>
+      <div class="s5__overflow--content scrollbar js-scroll-container">
+        <div class="s5__container s5-padding">
+          <div class="s5__carts">
+            <p>GoDaddy is a complete “no brainer”</p>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+            </div>
+            <p>GoDaddy is a complete “no brainer” - fantastic experience from the get-go. Made my transition from employee to business owner so simple. Everything under one roof, great customer service (24/7/365 support) and very reasonably priced - brilliant & cannot recommend highly enough!👏🏽👏🏽👏🏽</p>
+            <p>Paul Stevens</p>
+          </div>
+
+          <div class="s5__carts">
+            <p>One-stop awesomeness for business!</p>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+            </div>
+            <p>We use GoDaddy for our business website as well as commerce/payment processing.  We get lots of complements on our website which we built in about an hour using a GoDaddy template.  We also use their commerce payment processing and it is the BEST!  Lowest fees, no per-transaction fee, and the Poynt terminal is so easy to use and dependable.</p>
+            <p>Shannon Timmons</p>
+          </div>
+
+          <div class="s5__carts">
+            <p>GoDaddy is the Best!</p>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+            </div>
+            <p>GoDaddy is my favorite business to purchase and host domains. There customer support is excellent, and all of their products and services and super easy to use. I highly recommend GoDaddy.</p>
+            <p>Happy Customer</p>
+          </div>
+
+          <div class="s5__carts">
+            <p>Godaddy has made everything so easy!!</p>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+            </div>
+            <p>Godaddy has made creating a beautiful & professional looking website so easy! The email setup was quick too. Anytime I've had a question or even once a technical issue they have solved it in minutes! I have been so impressed with the helpfulness I've received since switching to Godaddy! I cannot recommend them enough!!</p>
+            <p>Crystal H</p>
+          </div>
+
+          <div class="s5__carts">
+            <p>Great approach for the small business</p>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#DCDCE6"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#DCDCE6"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+            </div>
+            <p>Great approach for the small business.  Nicely packaged to get email and website up and running quickly. </p>
+            <p>Kalpesh Mistry</p>
+          </div>
+
+          <div class="s5__carts">
+            <p>We switched to Godaddy from our…</p>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+            </div>
+            <p>We switched to Godaddy from our previous provider and we could not be more pleased. They offer a vast product line to help you meet whatever your goals are. The customer service is by far the best. Im so glad we switched</p>
+            <p>Brittan Hill</p>
+          </div>
+
+          <div class="s5__carts">
+            <p>Godaddy is proactive and helps you…</p>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+            </div>
+            <p>Godaddy is proactive and helps you figure out what you need to create and maintain an online presence. For a busy professional they make it easy and you don't need to have your own IT department to the job.</p>
+            <p>Dr E.</p>
+          </div>
+
+          <div class="s5__carts">
+            <p>GoDaddy is just the best-easy website…</p>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+            </div>
+            <p>GoDaddy is just the best-easy website building tools, great 24/7 support for any tech questions, and an all inclusive package that includes SEO support at a great price. </p>
+            <p>Mary Caldwell</p>
+          </div>
+
+          <div class="s5__carts">
+            <p>I love Go Daddy</p>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+            </div>
+            <p>I love Go Daddy! Great products. Simple and easy to set up domains, websites, etc. Awesome customer service. When you need help it’s seriously just a call away!!!</p>
+            <p>Terri</p>
+          </div>
+
+          <div class="s5__carts">
+            <p>Great resource for the solopreneur</p>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+            </div>
+            <p>Great products for the solo entrepreneur. Good variety of website templates, easy to find something that works with my brand, CMS easy to use, additional upgrades available when I need to make enhancements for my business, monthly metrics emails are a good reminder to check-in, and I like that there are new innovations being launched that can enhance my site experience.</p>
+            <p>Jill Cashman</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="s5__bottom s5-padding">
+        <div>
+          <div>
+            <a href="">
+              <img src="images/icons/trustpilot-logo.svg" alt="trustpilot-logo">
+            </a>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#00B67B"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#DCDCE6"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+          <div class="s5__div--reviews">
+            <a class="s5__reviews" href="">4.6 out of 5 stars based on <b>108,463</b>reviews</a>
+            <p class="s5__reviews" >Showing our 4 and 5 stars reviews.</p>
+          </div>
+        </div>
+        <div class="s5__scroll--buttons">
+          <button class="s5__scroll--button--left js-scroll-left-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="36" height="36"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg></button>
+          <button class="s5__scroll--button--right js-scroll-right-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="36" height="36"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg></button>
+        </div>
+      </div>
+
+    </section>
+
+<!-- section 6 -->
+    <section class="section-6">
+      <div class="s6__content">
+        <h2>It all starts with a domain.</h2>
+        <p>Make your idea real. Claim your space online with a domain.</p>
+        <form class="s6__form">
+          <input type="text" placeholder="Find your perfect domain">
+          <button class="s6__button--form"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg></button>
+        </form>
+      </div>
+    </section>
+
+<!-- section 7 -->
+    <section class="section-7">
+      <div class="s7__background--d">
+        <h5 class="s7__fig-d">
+          Jamila R. <br>
+          <span>GoDaddy Guide</span>
+        </h5>
+        <div class="s7__background--m">
+          <h5 class="s7__fig-m">
+            Jamila R. <br>
+            <span>GoDaddy Guide</span>
+          </h5>
+        </div>
+        <div class="s7__content--bottom">
+          <img src="images/icons/GoDaddy-Guides-Logo.svg" alt="godaddy guide logo">
+          <h2>Why go with GoDaddy?</h2>
+          <p>Because we know that even the best technology is only as good as the people behind it. That’s why we offer expert support, plus a lot more.</p>
+          <a class="black--button" href="">Get Help <img src="images/icons/arrow-right.svg" alt="arrow icon right"></a>
+        </div>
+      </div>
+    </section>
+
+<!-- section 8 -->
+    <section class="section-8">
+       <div class="s8__h2">
+        <h2>Millions of customers rely on our domains and web hosting to get their ideas online.</h2>
+        <h2>Frequently Asked Questions</h2>
+       </div>
+       <div>
+
+        <details class="s8--items">
+          <summary class="s8__summary js-summary-click">
+            <p class="s8__header--article">How does GoDaddy help small business owners succeed?</p>
+            <img class="s8__arrow js-translate-arrow" src="images/icons/arrow-down.svg" alt="arrow icon">
+          </summary>
+          <p class="s8__paragraph">GoDaddy offers more than just a platform to build your website, we offer everything you need to create an effective, memorable online presence. Already have a site? We offer hosting plans that will keep it fast, secure and online. Our professional email helps you build a professional image, while our online marketing tools empower entrepreneurs to get online with an SEO-friendly website. GoDaddy is an all-in-one solution provider to get your idea online, backed with expert, personalized support from GoDaddy Guides.</p>
+        </details>
+
+        <details class="s8--items">
+          <summary class="s8__summary js-summary-click">
+            <p class="s8__header--article">Why do I need a website for my business?</p>
+            <img class="s8__arrow js-translate-arrow" src="images/icons/arrow-down.svg" alt="arrow icon">
+          </summary>
+          <p class="s8__paragraph">Even small local businesses that only serve their hometown need a site. That's because the web is the first place people go when looking for a product or service. A website helps every business:</p>
+          <ul>
+            <li>Promote and sell their products and services</li>
+            <li>Connect with new customers (and keep existing customers)</li>
+            <li>Build credibility</li>
+            <li>Compete with bigger businesses</li>
+            <li>Control their brand and keep their marketing fresh and current</li>
+          </ul>
+          <p class="s8__paragraph">Best of all, a website is much easier and more affordable than you might think. GoDaddy offers a complete selection of online tools for building websites, along with hosting, email and marketing options to grow their business on the web.</p>
+        </details>
+
+        <details class="s8--items">
+          <summary class="s8__summary js-summary-click">
+            <p class="s8__header--article">Why do I need a professional email?</p>
+            <img class="s8__arrow js-translate-arrow" src="images/icons/arrow-down.svg" alt="arrow icon">
+          </summary>
+          <p>There are a lot of reasons to switch from your free email to a domain-based email, but here are the top 3:</p>
+          <ol>
+            <li>Customers are much more likely to trust a professional address like lily@lilysbikes.com than lilysbikestexas84@notmail.com.</li>
+            <li><a href="">Professional Email</a> provides world-class security with industry-leading spam and virus filters.</li>
+            <li>Personalized email addresses promote your business more effectively. Every time you send an email, you are giving your web address to customers and prospects, encouraging them to visit your website.</li>
+          </ol>
+        </details>
+
+        <details class="s8--items">
+          <summary class="s8__summary js-summary-click">
+            <p class="s8__header--article">Why get a domain name from GoDaddy?</p>
+            <img class="s8__arrow js-translate-arrow" src="images/icons/arrow-down.svg" alt="arrow icon">
+          </summary>
+          <p class="s8__paragraph">GoDaddy is the world’s largest and trusted domain registrar that empowers people like you with creative ideas to succeed online. <a href=""> Buying a domain name </a> is easy with our domain search tool and domain name generator tools you can find the perfect website address for your business.</p>
+        </details>
+
+        <details class="s8--items">
+          <summary class="s8__summary js-summary-click">
+            <p class="s8__header--article">Why use GoDaddy Website Builder?</p>
+            <img class="s8__arrow js-translate-arrow" src="images/icons/arrow-down.svg" alt="arrow icon">
+          </summary>
+          <p class="s8__paragraph">Because it’s a fast, simple way to create a website that you — and your customers — will love. Simply type in your idea or industry and GoDaddy <a href="">Website Builder</a> will pull up a number of professionally designed, ready-to-launch templates. From there, just add your own text and images and you’re good to go.</p>
+        </details>
+
+        <details class="s8--items">
+          <summary class="s8__summary js-summary-click">
+            <p class="s8__header--article">What makes GoDaddy Web Hosting the world leader?</p>
+            <img class="s8__arrow js-translate-arrow" src="images/icons/arrow-down.svg" alt="arrow icon">
+          </summary>
+          <p class="s8__paragraph">With nearly 20 years in the industry, we have the experience, the technology and the hosting experts to help web designers, developers, bloggers and online businesses create and maintain their online presence. Our secure <a href="">web hosting platform</a>, complete with cPanel, offers a 99.9% uptime guarantee*** and award-winning support, which has helped nearly 20+ million customers get online.</p>
+        </details>
+
+        <details class="s8--items">
+          <summary class="s8__summary js-summary-click">
+            <p class="s8__header--article">Why choose GoDaddy for WordPress?</p>
+            <img class="s8__arrow js-translate-arrow" src="images/icons/arrow-down.svg" alt="arrow icon">
+          </summary>
+          <p class="s8__paragraph">GoDaddy offers reliable and affordable <a href="">WordPress hosting</a> and <a href="">WooCommerce hosting</a> plans, one-click installs and the latest version so you have the most recent features available for your site. Your website content is managed from one place; you have a wealth of themes and add-ons giving you limitless options to succeed.</p>
+        </details>
+
+        <details class="s8--items">
+          <summary class="s8__summary js-summary-click">
+            <p class="s8__header--article">Why should I transfer my domain, website or web hosting to GoDaddy?</p>
+            <img class="s8__arrow js-translate-arrow" src="images/icons/arrow-down.svg" alt="arrow icon">
+          </summary>
+          <p class="s8__paragraph">There are a few different reasons. Our award-winning support is always high on the list of why people move their presence to GoDaddy. Of course, our prices — including a free 1-year extension on many domain transfers — is another popular reason. And if you already have one or more of our products, transferring your domain, website or hosting to us lets you consolidate your web presence with one provider so it’s easier to manage.</p>
+        </details>
+
+        <details class="s8--items">
+          <summary class="s8__summary js-summary-click">
+            <p class="s8__header--article">Why use the GoDaddy Logo Maker?</p>
+            <img class="s8__arrow js-translate-arrow" src="images/icons/arrow-down.svg" alt="arrow icon">
+          </summary>
+          <p class="s8__paragraph">With the <a href="">GoDaddy Logo Maker</a> it's easy to make a custom logo that'll help define your brand's personality and transform your business. From logomarks to logotypes, there are hundreds of templates to choose from. Or you can design your own in just minutes. No design skills needed.</p>
+        </details>
+
+       </div>
+    </section>
+
+<!-- section 9 -->
+    <section class="section-9">
+      <div class="s9__top">
+        <a href="">*, ***, **, ^ View product limitations and legal policies</a>
+        <p>Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.</p>
+      </div>
+      <div class="s9__bottom">
+        <p>Need help? Call our award-winning support team at (09) 975-9407</p>
+      </div>
+    </section>
+  </main>
+
+<!-- footer -->
+  <footer>
+    <nav class="foot__navigation foot--padding">
+      <ul class="foot__navigation__ul">
+        <li>
+          <div class="foot__iteme__header js-show-sub-menu-footer">About GoDaddy</div>
+          <ul class="foot__iteme__links js-sub-menu-footer">
+            <li><a href="">About Us</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Corporate Responsibility</a></li>
+            <li><a href="">Investor Relations</a></li>
+            <li><a href="">Legal</a></li>
+            <li><a href="">Newsroom</a></li>
+            <li><a href="">Trust Center</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="foot__iteme__header js-show-sub-menu-footer">Help Center</div>
+          <ul class="foot__iteme__links js-sub-menu-footer">
+            <li><a href="">Help Center</a></li>
+            <li><a href="">Venture Forward: Microbusiness Data</a></li>
+            <li><a href="">GoDaddy Blog</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">Report Abuse</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="foot__iteme__header js-show-sub-menu-footer">Resources</div>
+          <ul class="foot__iteme__links js-sub-menu-footer">
+            <li><a href="">Webmail</a></li>
+            <li><a href="">WHOIS</a></li>
+            <li><a href="">GoDaddy Mobile App</a></li>
+            <li><a href="">ICANN Confirmation</a></li>
+            <li><a href="">Designers & Developers</a></li>
+            <li><a href="">Corporate Domains</a></li>
+            <li><a href="">Redeem Code</a></li>
+            <li><a href="">Product Catalog</a></li>
+            <li><a href="">Videos</a></li>
+            <li><a href="">Business Name Generator</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="foot__iteme__header js-show-sub-menu-footer">Partner Programs</div>
+          <ul class="foot__iteme__links js-sub-menu-footer">
+            <li><a href="">Affiliates</a></li>
+            <li><a href="">Reseller Programs</a></li>
+            <li><a href="">GoDaddy Pro</a></li>
+            <li><a href="">Commerce Partners</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="foot__iteme__header js-show-sub-menu-footer">Account</div>
+          <ul class="foot__iteme__links js-sub-menu-footer">
+            <li><a href="">My Products</a></li>
+            <li><a href="">Renewals & Billing</a></li>
+            <li><a href="">Create Account</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="foot__iteme__header js-show-sub-menu-footer">Shopping</div>
+          <ul class="foot__iteme__links js-sub-menu-footer">
+            <li><a href="">Buy a Domain</a></li>
+            <li><a href="">Websites</a></li>
+            <li><a href="">Business Email</a></li>
+            <li><a href="">WordPress</a></li>
+            <li><a href="">Hosting</a></li>
+            <li><a href="">Web Security</a></li>
+            <li><a href="">Logo Generator</a></li>
+            <li><a href="">POS System</a></li>
+            <li><a href="">Online Payments</a></li>
+            <li><a href="">Phone Numbers</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="foot__bottom">
+      <div class="foot__bottom__top">
+        <a class="link--here foot--padding" href="">
+          <svg xmlns="http://www.w3.org/2000/svg" class="logo-mark logo-mark-foot" viewBox="0 0 166 32">
+            <path d="M30.824 1.453c-3.713-2.316-8.603-1.77-12.963.972-4.347-2.74-9.239-3.288-12.948-.972C-.955 5.12-1.667 14.564 3.32 22.546c3.677 5.887 9.428 9.335 14.548 9.271 5.119.064 10.87-3.384 14.547-9.27C37.4 14.563 36.692 5.12 30.824 1.452zM6.02 20.863a19.112 19.112 0 01-2.303-5.273 15.067 15.067 0 01-.5-4.97C3.44 7.673 4.64 5.375 6.598 4.15c1.957-1.224 4.544-1.295 7.299-.203.419.169.829.358 1.228.568a22.496 22.496 0 00-3.956 4.754C8.14 14.116 7.215 19.511 8.272 23.81a19.723 19.723 0 01-2.253-2.947zm26.003-5.273a19.158 19.158 0 01-2.302 5.272 19.733 19.733 0 01-2.254 2.954c.946-3.855.303-8.576-2.014-13.005a.583.583 0 00-.837-.228l-7.225 4.515a.59.59 0 00-.188.813l1.06 1.695a.59.59 0 00.814.188l4.683-2.925c.151.454.303.901.416 1.363.442 1.617.611 3.297.5 4.97-.223 2.95-1.424 5.247-3.38 6.471a6.607 6.607 0 01-3.35.97h-.15a6.599 6.599 0 01-3.35-.97c-1.958-1.224-3.159-3.521-3.381-6.472-.11-1.672.058-3.352.5-4.969a19.671 19.671 0 016.03-9.65 15.108 15.108 0 014.241-2.629c2.748-1.092 5.34-1.02 7.298.203 1.958 1.224 3.157 3.522 3.38 6.47a15.105 15.105 0 01-.49 4.964z"></path>
+            <path d="M74.065 12.892c-4.06 0-7.34 3.169-7.34 7.2 0 4.004 3.28 7.121 7.34 7.121 4.086 0 7.366-3.112 7.366-7.12 0-4.03-3.275-7.2-7.366-7.2zm0 10.557c-1.871 0-3.295-1.513-3.295-3.384s1.424-3.407 3.295-3.407c1.898 0 3.322 1.54 3.322 3.412 0 1.87-1.424 3.385-3.322 3.385v-.006zM90.583 7.362h-7.468a.6.6 0 00-.61.612v18.208a.605.605 0 00.61.648h7.468c5.977 0 10.13-3.975 10.13-9.758 0-5.818-4.153-9.71-10.13-9.71zm.177 15.622h-4.087V11.198h4.087c3.308 0 5.588 2.474 5.588 5.866 0 3.336-2.28 5.92-5.588 5.92zm24.82-9.7h-2.809a.633.633 0 00-.582.612v.833c-.64-1.057-2.085-1.835-3.884-1.835-3.503 0-6.783 2.751-6.783 7.145 0 4.37 3.251 7.171 6.755 7.171 1.806 0 3.28-.777 3.92-1.834v.861a.587.587 0 00.582.585h2.808a.571.571 0 00.584-.585V13.896a.594.594 0 00-.592-.612zm-6.533 10.196c-1.86 0-3.256-1.43-3.256-3.412s1.397-3.41 3.256-3.41c1.86 0 3.257 1.426 3.257 3.408 0 1.983-1.395 3.412-3.257 3.412v.002zm22.294-16.118h-2.808a.592.592 0 00-.61.584v6.728c-.648-1.002-2.114-1.78-3.948-1.78-3.476 0-6.7 2.751-6.7 7.145 0 4.37 3.252 7.171 6.755 7.171 1.806 0 3.17-.777 3.92-1.834v.861c0 .322.261.583.583.585h2.808a.57.57 0 00.584-.585V7.95a.57.57 0 00-.584-.588zm-6.532 16.152c-1.852 0-3.237-1.444-3.237-3.448 0-2.003 1.39-3.447 3.237-3.447 1.846 0 3.237 1.444 3.237 3.447 0 2.004-1.384 3.448-3.237 3.448zm22.29-16.152h-2.803a.594.594 0 00-.612.584v6.728c-.64-1.002-2.114-1.78-3.947-1.78-3.477 0-6.7 2.751-6.7 7.145 0 4.37 3.253 7.171 6.755 7.171 1.807 0 3.168-.777 3.92-1.834v.861a.587.587 0 00.584.585h2.803a.568.568 0 00.582-.585V7.95a.568.568 0 00-.582-.588zm-6.532 16.152c-1.853 0-3.237-1.444-3.237-3.448 0-2.003 1.39-3.447 3.237-3.447 1.846 0 3.237 1.444 3.237 3.447 0 2.004-1.38 3.448-3.232 3.448h-.005zm21.906-9.283l-4.19 14.37c-.809 2.556-2.613 4.086-5.421 4.086-1.277 0-2.44-.261-3.35-.782-.531-.303-.971-.58-.971-1.023 0-.275.089-.417.25-.675l.832-1.246c.235-.348.408-.461.66-.461a.96.96 0 01.554.192c.523.339 1.008.63 1.748.63.864 0 1.524-.277 1.88-1.306l.36-1.193h-1.696c-.418 0-.648-.249-.751-.584l-3.75-12.008c-.14-.473-.011-.946.683-.946h2.954c.36 0 .613.123.771.64l2.77 9.67 2.589-9.67c.082-.334.306-.64.75-.64h2.802c.552-.001.719.387.526.946zm-96.806 4.274v7.676a.625.625 0 01-.635.634h-2.317a.623.623 0 01-.634-.634v-2.015c-1.472 1.858-4.03 3.028-6.924 3.028-5.434 0-9.681-4.088-9.681-9.908 0-6.048 4.585-10.217 10.377-10.217 4.276 0 7.694 1.839 9.212 5.537a.843.843 0 01.07.309c0 .175-.116.307-.486.435l-2.706 1.042a.694.694 0 01-.511.009.783.783 0 01-.324-.371c-.971-1.847-2.7-3.1-5.36-3.1-3.45 0-5.922 2.694-5.922 6.188 0 3.387 2.104 6.172 6.02 6.172 2.06 0 3.703-.97 4.469-2.037H57.87a.625.625 0 01-.634-.635v-2.086a.625.625 0 01.634-.634h7.161a.604.604 0 01.635.607z"></path>
+            <path d="M162.55 10.442v-.186c0-.013.004-.026.012-.036a.052.052 0 01.034-.013h1.183c.013 0 .025.005.034.013.009.01.013.023.013.036v.186a.052.052 0 01-.013.034.047.047 0 01-.034.013h-.432v1.167a.05.05 0 01-.048.048h-.224a.044.044 0 01-.032-.014.047.047 0 01-.015-.034v-1.167h-.432a.044.044 0 01-.047-.047zm2.068-.193l.323.75.324-.75a.066.066 0 01.026-.032.087.087 0 01.044-.01h.375a.044.044 0 01.047.046v1.404a.044.044 0 01-.045.047h-.21a.047.047 0 01-.035-.013.042.042 0 01-.013-.034v-1.06l-.348.77a.084.084 0 01-.026.038.08.08 0 01-.043.01h-.172a.078.078 0 01-.042-.01.073.073 0 01-.026-.037l-.346-.77v1.06a.052.052 0 01-.013.033.052.052 0 01-.032.013h-.216a.042.042 0 01-.03-.013.042.042 0 01-.013-.034v-1.404a.044.044 0 01.047-.046h.364c.014 0 .029.003.042.01.009.009.015.02.018.032z"></path>
+            <path d="M27.889 30.386v-.21c0-.015.005-.03.015-.04a.048.048 0 01.038-.015h1.342c.014-.001.028.004.038.015.01.01.016.025.015.04v.21a.051.051 0 01-.015.04.048.048 0 01-.038.014h-.49v1.322a.05.05 0 01-.017.04.051.051 0 01-.038.017h-.253a.055.055 0 01-.038-.017.06.06 0 01-.015-.04V30.44h-.49a.048.048 0 01-.039-.015.051.051 0 01-.015-.04zm2.345-.217l.374.848.375-.848a.073.073 0 01.03-.036.08.08 0 01.05-.012h.4a.051.051 0 01.053.053v1.592a.056.056 0 01-.013.037.05.05 0 01-.037.016h-.24a.055.055 0 01-.038-.016.056.056 0 01-.015-.037v-1.203l-.393.874a.09.09 0 01-.03.04.086.086 0 01-.05.013h-.194a.085.085 0 01-.048-.012.09.09 0 01-.03-.041l-.393-.874v1.203a.05.05 0 01-.015.037.053.053 0 01-.036.016h-.243a.05.05 0 01-.036-.016.056.056 0 01-.015-.037v-1.592a.05.05 0 01.017-.038.047.047 0 01.036-.015h.413a.083.083 0 01.049.012.071.071 0 01.029.036z"></path>
+          </svg>
+        </a>
+        <div class="flex-foot-ls foot--padding">
+          <div class="foot__choose--language">
+            <button>United States - English <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="28" height="28"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg></button>
+            <button>USD $ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="28" height="28"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg></button>
+          </div>
+          <nav class="foot__social--links">
+            <a href="https://www.facebook.com/godaddy"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg></a>
+            <a href="https://www.instagram.com/godaddy"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg></a>
+            <a href="https://www.tiktok.com/@godaddy?lang=en"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16"><path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/></svg></a>
+            <a href="https://www.twitter.com/GoDaddyUK"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg></a>
+            <a href="https://www.youtube.com/channel/UCMoMjgZ67wrRjs93ZWx3Ksw"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/></svg></a>
+          </nav>
+        </div>
+      </div>
+      <nav class="foot__privacy foot--padding">
+        <a href="">Legal</a>
+        <a href="">Privacy Policy</a>
+        <a href="">Cookies</a>
+      </nav>
+      <div class="copyright foot--padding">
+        <a href="">Do not share my personal information</a>
+        <p>Copyright © 1999 - 2024 GoDaddy Operating Company, LLC. All Rights Reserved. The GoDaddy word mark is a registered trademark of GoDaddy Operating Company, LLC in the US and other countries. The “GO” logo is a registered trademark of GoDaddy.com, LLC in the US.</p>
+        <p>Use of this Site is subject to express terms of use. By using this site, you signify that you agree to be bound by these Universal Terms of Service.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="cookies">
+    <button id="cookies__exit">x</button>
+    <p>We serve cookies. We use tools, such as cookies, to enable essential services and functionality on our site and to collect data on how visitors interact with our site, products and services. By clicking Accept, you agree to our use of these tools for advertising, analytics and support. <a href="#">Privacy Policy</a></p>
+    <div id="cookies__buttons">
+      <button>Manege</button>
+      <button>Decline</button>
+      <button id="cookies__accept">Accept</button>
+    </div>
+  </div>
+</body>
+</html>
