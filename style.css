@@ -28,6 +28,8 @@ body {
   --ligt-gray: #5E5E5E;
   --black: #111111;
   --white: #ffffff;
+  --whith-gary: #F5F7F8;
+  --gray: #444444;
 }
 button {
   background-color: transparent;
@@ -215,7 +217,7 @@ a {
   font-weight: 600;
   
   &::placeholder {
-    color: #444444;
+    color: var(--gray);
   }
 }
 .sfp__form--button {
@@ -262,7 +264,7 @@ a {
   -o-border-radius: 8px;
 
   &:is(:hover, :active) {
-    background-color: #F5F7F8;
+    background-color: var(--whith-gary);
     a {
       color: var(--green-1);
     }
@@ -282,7 +284,7 @@ a {
 .sfp__left {
   width: 270px;
   display: none;
-  background-color: #F5F7F8;
+  background-color: var(--whith-gary);
   padding: 24px 20px;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -292,7 +294,7 @@ a {
 }
 .sfp__left__p {
   margin-bottom: 10px;
-  color: #444444;
+  color: var(--gray);
   text-transform: uppercase;
 }
 .sfp__left__links {
@@ -614,7 +616,7 @@ svg[class|="logo-mark"] {
   display: flex;
   align-items: center;
   padding: 6px 13px;
-  color: #444444;
+  color: var(--gray);
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -694,7 +696,7 @@ svg[class|="logo-mark"] {
   gap: 13px;
 }
 .search--product {
-  background-color: #444444;
+  background-color: var(--gray);
 }
 .header__right--button {
   border-radius: 8px;
@@ -1722,7 +1724,7 @@ svg[class|="logo-mark"] {
 .section3__card article {
   height: 240px;
   padding: 24px 16px;
-  background-color: #F5F7F8;
+  background-color: var(--whith-gary);
   border-radius: 0 0 12px 12px;
   -webkit-border-radius: 0 0 12px 12px;
   -moz-border-radius: 0 0 12px 12px;
@@ -2063,7 +2065,7 @@ svg[class|="logo-mark"] {
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
-  background-color: #F5F7F8;
+  background-color: var(--whith-gary);
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -2358,11 +2360,13 @@ svg[class|="logo-mark"] {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  font-weight: 600;
+  font-size: 1.1rem;
+
 }
 .s8__header--article {
-  font-size: 1.1rem;
   width: calc(100% - 28px);
-  font-weight: 600;
+
 }
 .s8__paragraph {
   line-height: 1.6rem;
@@ -2374,7 +2378,7 @@ svg[class|="logo-mark"] {
   .section-8 {
     width: 500px;
   }
-  .s8__header--article {
+  .s8__summary {
     font-size: clamp(1.1rem, 1.8vw, 1.7rem);
   }
 }
@@ -2382,7 +2386,9 @@ svg[class|="logo-mark"] {
   .section-8 {
     width: 700px;
   }
-  .s8__paragraph {
+  .s8__paragraph,
+  .s8--items ol,
+  .s8--items ul {
     width: 70%;
   }
 }
@@ -2403,7 +2409,7 @@ svg[class|="logo-mark"] {
 }
 .s9__bottom {
   text-align: center;
-  background-color: #F5F7F8;
+  background-color: var(--whith-gary);
   padding: 20px;
 }
 @media(min-width: 992px) {
