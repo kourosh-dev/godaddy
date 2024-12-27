@@ -862,6 +862,14 @@ svg[class|="logo-mark"] {
   header {
     padding-inline: 4vw;
   }
+  .link-logo-mark {
+    position: static;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+}
   .right--header {
     gap: 20px;
   }
