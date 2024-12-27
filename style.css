@@ -388,6 +388,7 @@ header {
   padding-inline: 13px;
   height: 60px;
   text-transform: capitalize;
+  position: relative;
 }
 .left--header {
   display: flex;
@@ -397,6 +398,19 @@ header {
 }
 .sidebar__button--open {
   margin-right: 10px;
+}
+.link-logo-mark {
+  position: absolute;
+  left: 50px;
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 svg[class|="logo-mark"] {
   height: 26px;
@@ -830,6 +844,9 @@ svg[class|="logo-mark"] {
 @media(min-width: 768px) {
   header {
     padding-inline: 24px;
+  }
+  .link-logo-mark {
+    left: 70px;
   }
   .cookies {
     max-width: 500px;
